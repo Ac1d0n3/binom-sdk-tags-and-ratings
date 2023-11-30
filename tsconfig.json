@@ -3,6 +3,9 @@
   "compileOnSave": false,
   "compilerOptions": {
     "paths": {
+      "@binom/sdk-tags-and-ratings/*": [
+        "./dist/binom/sdk-tags-and-ratings/*"
+      ],
       "@binom/sdk-tags-and-ratings": [
         "./dist/binom/sdk-tags-and-ratings"
       ]

@@ -7,7 +7,7 @@
       "projectType": "library",
       "root": "projects/binom/sdk-tags-and-ratings",
       "sourceRoot": "projects/binom/sdk-tags-and-ratings/src",
-      "prefix": "lib",
+      "prefix": "bn",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:ng-packagr",
