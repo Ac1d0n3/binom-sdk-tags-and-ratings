@@ -1,1 +1,13 @@
-<p>bn-ratings works!</p>
+<div >
+    <div *ngFor="let r of ratings; let i = index " 
+    matRipple [matRippleCentered]="true" [matRippleRadius]="100" class="bn-ratingbox " 
+    [class.bn-ratingbox-norad]="icontype==='box'" [matRippleDisabled]="disabled"
+    [class.bn-rating-disabled]="disabled">
+       <bn-icon  [setClass]="'bn-rating-'+ size "
+          [class]="(color!=''? color +'-color' : '') + (disabled? ' bn-rating-disabled' : '') + (' bn-rating-'+ size )"
+          [type]="i +1 <= rating? 'fas':'far'" 
+          [icon]="icon" (click)="doRating(i+1)">
+       </bn-icon>
+    </div>
+ </div>
+ 

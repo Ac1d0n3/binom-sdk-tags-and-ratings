@@ -1,0 +1,35 @@
+
+.bn-rating-disabled{
+
+    cursor: default !important;
+}
+
+.bn-rating-large,
+.bn-rating-largebox{
+   font-size: 19px !important;
+}
+
+.bn-ratingbox{
+    width: fit-content;
+    height: fit-content;
+    position: relative;
+    display: inline-block;
+    border-radius: 100%;
+    cursor: pointer;
+}
+
+.bn-ratingbox-norad{
+    border-radius: 0;
+}
+
+.bn-rating-small,
+.bn-rating-smallbox{
+    font-size: 14px !important;
+ }
+
+ .bn-rating-largebox,
+ .bn-rating-smallbox,
+ .bn-rating-mediumbox {
+    margin: 0.5px;
+    width: fit-content;
+ }
