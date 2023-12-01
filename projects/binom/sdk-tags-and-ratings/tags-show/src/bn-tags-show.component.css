@@ -1,0 +1,43 @@
+.chip-list{
+    width:90%;
+    margin:10px;
+}
+
+.tags:not(.token) li {
+    float: left;
+}
+
+.tag:not(.token) {
+    border-radius: 3px 0 0 3px;
+    height: 26px;
+    line-height: 26px;
+    padding: 0 17px 0 17px;
+    position: relative;
+    width:fit-content;
+    margin: 10px 10px 10px 0;
+    text-decoration: none;
+    -webkit-transition: color 0.2s;
+    transition: color 0.2s;
+    display: inline-block;
+    cursor: pointer;
+}
+
+
+.tag:not(.token)::before {
+    border-radius: 10px;
+    content: '';
+    height: 6px;
+    left: 5px;
+    position: absolute;
+    width: 6px;
+    top: 10px;
+}
+
+.tag:not(.token)::after {
+    border-bottom: 13px solid transparent;
+    border-top: 13px solid transparent;
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 0;
+}

@@ -1,2 +1,2 @@
 
-export * from './src/bn-not-on-phone.guard';
+export * from './src/bn-ratings.component';
