@@ -1,1 +1,45 @@
-<p>bn-tags-edit works!</p>
+<mat-form-field class="chip-list edit-tags-list">
+    <mat-label>{{taglabel}}</mat-label>
+    <mat-chip-grid #chipGrid aria-label="Tag selection">
+  
+      <ng-container *ngIf="!styleDisabled && tagStyle==='bn'">
+        <div class="tag editTag" *ngFor="let tag of tags">
+            {{tag.tag}}
+            <button mat-button (click)="remove(tag)" style="height:20px;min-width: 15px !important;margin:0px">
+                <bn-icon style="display:inline-block" size="small" class="tagIcon" type="fas" icon="fa-times" ></bn-icon>
+            </button>
+        </div>
+     
+      </ng-container>
+
+      <ng-container *ngIf="!styleDisabled && tagStyle==='mat'">
+        <mat-chip-row  *ngFor="let tag of tags" (removed)="remove(tag)">
+            {{tag.tag}}
+            <button  matChipRemove  style="height:20px;min-width: 15px !important;margin:0px">
+                <bn-icon style="display:inline-block" size="small" class="tagIcon" type="fas" icon="fa-times" ></bn-icon>
+            </button>
+        </mat-chip-row>
+     
+      </ng-container>
+
+      <div *ngIf="styleDisabled" style="width:100%">
+        <span *ngFor="let tag of tags; let i = index">
+          <span *ngIf="i > 0">, </span>  {{tag.tag}} <i class="fas fa-times" (click)="remove(tag)"></i>
+        </span>
+      </div>
+
+      <input
+        placeholder="{{'newTag' | translate}}"
+        [formControl]="tagCtrl"
+        [matAutocomplete]="auto"
+        [matChipInputFor]="chipGrid"
+        [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
+        (matChipInputTokenEnd)="add($event)">
+    </mat-chip-grid>
+    <mat-autocomplete #auto="matAutocomplete" (optionSelected)="selected($event)">
+      <mat-option *ngFor="let tag of filteredTags | async" [value]="tag">
+        {{tag.tag}}
+      </mat-option>
+    </mat-autocomplete>
+  </mat-form-field>
+  

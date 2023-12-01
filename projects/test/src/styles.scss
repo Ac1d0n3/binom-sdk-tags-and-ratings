@@ -1,8 +1,6 @@
 @import '../../../node_modules/@binom/sdk-core/styles/core.scss';
 @import '../../../node_modules/@binom/sdk-core/styles/material-icons.scss';
 
-
-
 .regular-border{
   border-color: dimgray !important;
 }
@@ -17,4 +15,109 @@
   overflow: auto;
   overscroll-behavior: none;
   background-color: #111;
+}
+
+$textColor: white;
+
+$accentBgFont: #424242;
+$primaryBgFont: white;
+
+$backgroundColor:  #303030;
+$tagBg: #595959;
+$tagFont: $textColor;
+$tagHoverBg: orange;
+$tagShadow: rgba(0, 0, 0, 0.25);
+$tagHoverText: white;
+$outline: #616161;
+$appGridBg: silver;
+$appGridBgHover: #616161;
+$appGridBgHoverColor: orange;
+$formBg:  #424242;
+
+
+.chip-list{
+  width:90%;
+  margin:10px;
+}
+
+.edit-tags-list .mdc-text-field--filled,
+.edit-tags-list * :not(.tag,.mat-mdc-chip) {
+  background: transparent !important;
+  background-color: transparent !important;;
+}
+.tags:not(.token) li {
+  float: left;
+}
+
+.tag:not(.token) {
+  border-radius: 3px 0 0 3px;
+  height: 26px;
+  line-height: 26px;
+  padding: 0 17px 0 17px;
+  position: relative;
+  width:fit-content;
+  margin: 10px 10px 10px 0;
+  text-decoration: none;
+  -webkit-transition: color 0.2s;
+  transition: color 0.2s;
+  display: inline-block;
+  cursor: pointer;
+}
+
+
+.tag:not(.token)::before {
+  border-radius: 10px;
+  content: '';
+  height: 6px;
+  left: 5px;
+  position: absolute;
+  width: 6px;
+  top: 10px;
+}
+
+.tag:not(.token)::after {
+  border-bottom: 13px solid transparent;
+  border-top: 13px solid transparent;
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.tag {
+  background: $tagBg;
+  color: $tagFont;
+}
+
+.tag::before {
+  background: $textColor;
+  box-shadow: inset 0 1px $tagShadow;
+}
+
+.tag::after {
+  background: $backgroundColor;
+  border-left: 10px solid $tagBg;
+}
+
+.tag:hover {
+  background-color: $tagHoverBg;
+  color: $tagHoverText;
+}
+
+.tag:hover::after {
+  border-left-color: $tagHoverBg
+}
+
+.tagSelected {
+  background-color: orange;
+  color: $backgroundColor;
+}
+
+.tag::before {
+  background: $backgroundColor;
+  box-shadow: inset 0 1px $tagShadow;
+}
+
+.tagSelected::after {
+  border-left-color: orange;
 }

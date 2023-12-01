@@ -1,1 +1,22 @@
-<p>bn-tags-show-edit works!</p>
+<bn-tags-show *ngIf="editMode === false || editMode == undefined"
+[styleDisabled]="styleDisabled"
+[curSelectedTags]="curSelectedTags"
+[tags]="tags"
+[selectable]="selectable"
+[allTags]="allTags"
+[setParams]="setParams"
+[tagSearch]="tagSearch"
+[tagStyle]="tagStyle"
+[resetFromParams]="resetFromParams"
+(curTags)="onCurTags($event)"
+(selectedTags)="onSelectedTags($event)">
+</bn-tags-show>
+
+<bn-tags-edit *ngIf="editMode === true"
+[tags]="tags"
+[styleDisabled]="styleDisabled"
+[allTags]="allTags"
+[tagStyle]="tagStyle"
+(tagChange)="onTagChange($event)"
+(curTags)="onCurTags($event)">
+</bn-tags-edit>

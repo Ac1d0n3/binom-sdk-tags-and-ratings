@@ -18,7 +18,7 @@ import { BnIconComponent } from '@binom/sdk-core/icons';
 import { BnSearchFilterPipe } from '@binom/sdk-core/pipes';
 
 @Component({
-  selector: 'bn-bn-tags-show',
+  selector: 'bn-tags-show',
   standalone: true,
   imports: [CommonModule,MatChipsModule,MatTooltipModule,TranslateModule,MatRippleModule,MatButtonModule,BnIconComponent, BnSearchFilterPipe],
   templateUrl: './bn-tags-show.component.html',

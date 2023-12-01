@@ -31,8 +31,8 @@ export class AppComponent {
   data = [
 
     {
-      title: 'components',
-      data: ['abc-buttons']
+      title: 'demo',
+      data: ['ratings', 'tags']
     },
   ]
 

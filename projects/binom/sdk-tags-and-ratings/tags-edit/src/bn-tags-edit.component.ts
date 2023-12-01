@@ -16,12 +16,12 @@ import { MatRippleModule } from '@angular/material/core';
 import { MatButtonModule } from '@angular/material/button';
 import { BnIconComponent } from '@binom/sdk-core/icons';
 import { BnSearchFilterPipe } from '@binom/sdk-core/pipes';
-import { UntypedFormControl } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule, UntypedFormControl } from '@angular/forms';
 
 @Component({
-  selector: 'bn-bn-tags-edit',
+  selector: 'bn-tags-edit',
   standalone: true,
-  imports: [CommonModule,MatChipsModule,MatTooltipModule,TranslateModule,MatRippleModule,MatButtonModule,BnIconComponent, BnSearchFilterPipe,MatInputModule,MatAutocompleteModule ],
+  imports: [CommonModule,MatChipsModule,MatTooltipModule,TranslateModule,MatRippleModule,MatButtonModule,BnIconComponent, BnSearchFilterPipe,MatInputModule,MatAutocompleteModule, FormsModule, ReactiveFormsModule ],
   templateUrl: './bn-tags-edit.component.html',
   styleUrl: './bn-tags-edit.component.css'
 })

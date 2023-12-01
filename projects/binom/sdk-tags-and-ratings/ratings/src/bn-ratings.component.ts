@@ -5,7 +5,7 @@ import { BnIconComponent} from '@binom/sdk-core/icons';
 import { CommonModule } from '@angular/common';
 
 @Component({
-  selector: 'bn-bn-ratings',
+  selector: 'bn-ratings',
   standalone: true,
   imports: [CommonModule,BnIconComponent,MatRippleModule],
   templateUrl: './bn-ratings.component.html',

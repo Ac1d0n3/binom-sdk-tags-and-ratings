@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'bn-bn-tag-cloud',
+  selector: 'bn-tag-cloud',
   standalone: true,
   imports: [],
   templateUrl: './bn-tag-cloud.component.html',
