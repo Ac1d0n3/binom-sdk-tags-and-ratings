@@ -17,22 +17,19 @@
   background-color: #111;
 }
 
-$textColor: white;
 
-$accentBgFont: #424242;
-$primaryBgFont: white;
 
-$backgroundColor:  #303030;
-$tagBg: #595959;
-$tagFont: $textColor;
-$tagHoverBg: orange;
-$tagShadow: rgba(0, 0, 0, 0.25);
-$tagHoverText: white;
-$outline: #616161;
-$appGridBg: silver;
-$appGridBgHover: #616161;
-$appGridBgHoverColor: orange;
-$formBg:  #424242;
+body{
+  --text-color: #424242;
+  --bg-color: #fff;
+  --bg-color-content: #303030;
+  --tag-bg:  #595959;
+  --tag-font-color: #fff;
+  --tag-bg-hover:  orange;
+  --tag-font-hover:  #424242;
+  --tag-shadow: rgba(0, 0, 0, 0.25);
+  --tag-selected: orange;
+}
 
 
 .chip-list{
@@ -85,39 +82,39 @@ $formBg:  #424242;
 }
 
 .tag {
-  background: $tagBg;
-  color: $tagFont;
+  background: var(--tag-bg);
+  color: var(--tag-font-color);
 }
 
 .tag::before {
-  background: $textColor;
-  box-shadow: inset 0 1px $tagShadow;
+  background: var(--bg-color-content);
+  box-shadow: inset 0 1px var(--tag-shadow);
 }
 
 .tag::after {
-  background: $backgroundColor;
-  border-left: 10px solid $tagBg;
+  background: var(--bg-color-content);
+  border-left: 10px solid var(--tag-bg);
 }
 
 .tag:hover {
-  background-color: $tagHoverBg;
-  color: $tagHoverText;
+  background-color: var(--tag-bg-hover);
+  color: var(--tag-font-hover);
 }
 
 .tag:hover::after {
-  border-left-color: $tagHoverBg
+  border-left-color: var(--tag-bg-hover)
 }
 
 .tagSelected {
-  background-color: orange;
-  color: $backgroundColor;
+  background-color: var(--tag-bg-hover);
+  color: var(--bg-color-content);
 }
 
 .tag::before {
-  background: $backgroundColor;
-  box-shadow: inset 0 1px $tagShadow;
+  background: var(--bg-color-content);
+  box-shadow: inset 0 1px var(--tag-shadow);
 }
 
 .tagSelected::after {
-  border-left-color: orange;
+  border-left-color: var(--tag-bg-hover);
 }

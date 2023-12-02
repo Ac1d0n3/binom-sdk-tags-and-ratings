@@ -7,6 +7,7 @@ import { importProvidersFrom } from '@angular/core';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { BnRouterDataAndTitleService } from '@binom/sdk-core/router';
+import { BnTagsService } from '@binom/sdk-tags-and-ratings/tags-svc';
 
 
 export function createTranslateLoader(http: HttpClient): TranslateHttpLoader {
@@ -22,7 +23,7 @@ export const appConfig: ApplicationConfig = {
             useFactory: createTranslateLoader,
             deps: [HttpClient],
         },
-    })), provideAnimations(), provideAnimations(),BnRouterDataAndTitleService]
+    })), provideAnimations(), provideAnimations(),BnRouterDataAndTitleService, BnTagsService]
 };
 
 
